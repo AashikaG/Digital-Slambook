@@ -1,0 +1,33 @@
+<%- include('partials/header.ejs') %>
+
+<nav>
+    <p><a href="/">NIT-T Slam Book</a></p>
+    <div class="search">
+        <p><a href="/commentor">Back</a></p>
+    </div>
+</nav>
+
+<h3>Requests:</h3>
+
+<div class="comments-container">
+    <ul>
+        <% for(let i=0;i<requests.length;i++){ %>
+            <%console.log("working")%>            
+            <li><%=requests[i]%><form action="/connections" method="post"><input hidden name="name" value="<%=requests[i]%>"><button id="<%=i%>" class="delete" type="submit">Accept</button></form></li>
+        <% } %>
+    </ul>
+</div>
+
+<h3>Connections:</h3>
+
+<div class="comments-container">
+    <ul>
+        <% for(let i=0;i<friends.length;i++){ %>            
+            <li><%=friends[i]%></li>
+        <% } %>
+    </ul>
+</div>
+
+
+
+<%- include('partials/footer.ejs') %>

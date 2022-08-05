@@ -1,0 +1,15 @@
+<%- include("partials/header.ejs") %>
+<nav>
+    <p><a href="/">NIT-T Slam Book</a></p>
+</nav>
+<div class="form" id="login-form">
+    <form action="/login" method="post">
+        <h2>Login</h2>
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <p id="reg-para"><%= text %></p>
+        <button type="submit" class="login-btn">Login!</button>
+    </form>
+</div>
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,53 @@
+<%- include('partials/header.ejs') %>
+<script src="https://cdn.ckeditor.com/4.19.1/standard/ckeditor.js"></script>
+
+<nav>
+    <p><a href="/">NIT-T Slam Book</a></p>
+    <div class="search">
+        <p><a href="/commentor">Back</a></p>
+    </div>
+</nav>
+<div class="over">
+    <div class="welcome">
+        <h1>Welcome <%= person %>!</h1>
+        <h4>See what others think of <%= pronoun %>...</h4>
+        <h5 class="connection-num">
+            <%if(friends.length<=3){%>
+                <%=friends.length%>
+            <%}%>
+            <%if(friends.length>3){%>
+                <span>3+</span>
+            <%}%>
+            <i> connections...</i></h5>
+        <form action="/connect" method="post">
+                <input hidden type="text" value="filler">
+                <button type="submit" id="connect-btn"><%= status %></button>
+        </form>   
+    </div>
+    
+    <div class="comments">
+        <form action="/profile2" method="post">
+            <textarea name="comment" rows="2" cols="50"></textarea>
+            <button class="profile2-btn">Post!</button>
+        </form>
+    </div>
+    
+    <div class="comments-container">
+        <ul>
+            <% for(let i=0;i<comments.length;i++){ %>     
+                <% if(comments[i].commenter  ===  commentor_profile ){ %>
+                    <li><%=comments[i].commenter %> : <%- comments[i].comment %><form action="/clicked" method="post"><input hidden name="id" value="<%=i%>"><button id="<%=i%>" class="delete" type="submit">delete</button></form></li>
+                <%} else{ %>
+                    <li><%=comments[i].commenter %> : <%- comments[i].comment %><form action="/clicked" method="post"><input hidden name="id" value="<%=i%>"><button hidden id="<%=i%>" class="delete" type="submit">delete</button></form></li>
+                <% } %>
+            <% } %>
+        </ul>
+    </div>
+    
+</div>
+
+<script>
+    CKEDITOR.replace( 'comment' );
+</script>
+
+<%- include('partials/footer.ejs') %>

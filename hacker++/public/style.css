@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC&family=Dancing+Script:wght@600&family=Roboto+Condensed&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: #DDBEBE;
+}
+nav p{
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: #6C4A4A;
+    padding-left: 2%;
+}
+nav p a{
+    text-decoration: none;
+    color: #6C4A4A;
+}
+div.search{
+    padding: 2%;
+
+}
+div.search form{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+div.search input{
+    height: 25px;
+    width: 275px;
+    font-family: 'Roboto Condensed', sans-serif
+}
+div.search input:focus{
+    outline: none;
+}
+div.search button{
+    margin-left: 1%;
+    padding: 1%;
+    margin-bottom: 2%;
+    font-family: 'Roboto Condensed', sans-serif;
+    height: 22px;
+    width: 10%;
+}
+
+div.welcome{
+    font-family: 'Cormorant SC', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 2%;
+    clear: both;
+}
+/* home */
+div.home{
+    margin-top: 10%;
+}
+div.buttons .btn1{
+    padding: 5px;
+    margin-top: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #FFE3E3;
+    border: none;
+    box-shadow: 0 0 2px 2px #DDBEBE;
+}
+div.buttons .btn1:hover{
+    border-radius: 5px;
+    transform: translate(2px,2px);
+}
+div.buttons .btn2{
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #FFE3E3;
+    border: none;
+    box-shadow: 0 0 2px 2px #DDBEBE;
+}
+div.buttons .btn2:hover{
+    border-radius: 5px;
+    transform: translate(2px,2px);
+}
+.btn1 a, .btn2 a{
+    text-decoration: none;
+    color: rgb(21, 21, 67);
+}
+.home-container{
+    display: flex;
+}
+
+/* register */
+
+div.search-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+div.form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+form h2{
+    text-align: center;
+    font-family: 'Cormorant SC', serif;
+}
+div.form form input,button,select{
+    height: 10vh;
+    width: 20vw;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1rem;
+}
+form input:focus{
+    outline: none;
+}
+.login-btn,.profile-btn,.profile2-btn,#reg-btn{
+    background-color: #FFE3E3;
+    border: none;
+    box-shadow: 0 0 2px 2px #DDBEBE;
+    height: 7vh;
+    margin-top: 1%;
+}
+#reg-para{
+    color: red;
+    font-size: 1rem;
+}
+
+div.comments{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clear: both;
+    margin-top: 3%;
+}
+
+div.comments form{
+    display: flex;
+    flex-direction: row;
+}
+
+div.comments form textarea:focus{
+    outline: none;
+}
+
+div.comments button{
+    background-color: #FFE3E3;
+    border: none;
+    box-shadow: 0 0 2px 2px #DDBEBE;
+    height: 5vh;
+    width: 10%;
+    margin: 10px;   
+}
+
+div.comments-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7vh;
+    clear: both;
+}
+
+ul{
+    list-style: none;
+    margin-bottom: 30px;
+}
+li{
+    padding: 15px;
+    border: 1px solid black;
+    min-width: 50vw;
+    min-height: 10vh;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+.delete{
+    width: 20%;
+    margin-left: 60%;
+    margin-top: -5%;
+    height: 5vh;
+}
+
+.search a{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1rem;
+}
+#connect-btn{
+    height: 5vh;
+    width:110%;
+    margin-top: 5px;
+    font-size: 1rem;
+    background-color: rgb(221, 221, 245);
+    border: none;
+    border-radius:5px ;
+}
+
+#connect-form{
+    height: 10vh;
+}
+.connection-num{
+   color: rgb(164, 164, 249);
+}
+.manage{
+    
+    font-size: 0.75rem;
+}
+h3{
+    font-family: 'Cormorant SC', serif;
+    text-align: center;
+    margin-top: 10px;
+}
+.log-out{
+    text-decoration: none;
+    color: #6C4A4A;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1rem;
+    padding-left: 10%;
+}
+div.over{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* auth */
+div.dauth{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    flex-direction: column;
+}
+

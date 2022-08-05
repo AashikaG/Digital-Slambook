@@ -1,0 +1,21 @@
+<%- include('partials/header.ejs') %>
+<nav>
+    <p>NIT-T Slam Book</p>
+</nav>
+
+<div class="home welcome">
+    <h1 id="home-heading">Welcome to the NIT-T Slam Book!</h1>
+    
+    <div class="buttons">
+        <button class="btn1"><a href="/register">First time? Register!</a></button>
+        <button class="btn2"><a href="/login">Been here before? Login!</a></button>
+    </div>
+    <p class="success-reg"><strong><%=msg%></strong></p>
+    <div class="dauth">
+        <h3>Or...</h3>
+        <a href="https://auth.delta.nitt.edu/authorize?client_id=ZvSdA.JHSWtV1Afl&redirect_uri=http://localhost:3000/auth/delta/slam&response_type=code&grant_type=authorization_code&state=sdafsdghb&scope=email+openid+profile+user&nonce=bscsbascbadcsbasccabs""><strong>login with DAuth</strong></a>
+    </div>
+</div>
+
+
+<%- include('partials/footer.ejs') %>

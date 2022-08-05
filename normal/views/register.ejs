@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+<nav>
+    <p><a href="/">NIT-T Slam Book</a></p>
+</nav>
+<div class="form">
+    <form action="/register" method="post">
+        <h2>Registration</h2>
+        <input autocomplete="off" type="text" name="name" placeholder="Name">
+        <input autocomplete="off" type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password" id="p1">
+        <input type="password" name="cpassword" placeholder="Confirm Password" id="p2">
+        <p id="reg-para"></p>
+        <button type="submit" id="reg-btn">Register!</button>
+    </form>
+</div>
+
+<%- include("partials/footer.ejs") %>

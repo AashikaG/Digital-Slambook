@@ -1,0 +1,26 @@
+{
+  "name": "hacker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aashika",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.14.2",
+    "mongoose": "^6.5.0",
+    "mongoose-findorcreate": "^3.0.0",
+    "nodemailer": "^6.7.7",
+    "passport": "^0.6.0",
+    "passport-delta-oauth2": "^1.0.1"
+  }
+}

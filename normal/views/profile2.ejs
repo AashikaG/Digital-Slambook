@@ -1,0 +1,31 @@
+<%- include('partials/header.ejs') %>
+<nav>
+    <p><a href="/">NIT-T Slam Book</a></p>
+    <div class="search">
+        <p><a href="/previous">Back</a></p>
+    </div>
+</nav>
+<div class="welcome">
+    <h1>Welcome <%= person %>!</h1>
+    <h4>See what others think of <%= pronoun %>...</h4>
+</div>
+<div class="comments">
+    <form action="/profile2" method="post">
+        <textarea name="comment" placeholder="Share your thoughts..." id="" cols="50" rows="4"></textarea>
+        <button class="profile2-btn">Post!</button>
+    </form>
+</div>
+
+<div class="comments-container">
+    <ul>
+        <% for(let i=0;i<comments.length;i++){ %>     
+            <% if(comments[i].commenter  ===  commentor_profile ){ %>
+                <li><%=comments[i].commenter %> : <%= comments[i].comment %><form action="/clicked" method="post"><input hidden name="id" value="<%=i%>"><button id="<%=i%>" class="delete" type="submit">delete</button></form></li>
+            <%} else{ %>
+                <li><%=comments[i].commenter %> : <%= comments[i].comment %><form action="/clicked" method="post"><input hidden name="id" value="<%=i%>"><button hidden id="<%=i%>" class="delete" type="submit">delete</button></form></li>
+            <% } %>
+        <% } %>
+    </ul>
+</div>
+
+<%- include('partials/footer.ejs') %>

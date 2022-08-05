@@ -1,0 +1,39 @@
+<%- include("partials/header.ejs") %>
+<nav>
+    <p><a href="/">NIT-T Slam Book</a></p>
+</nav>
+<div class="form">
+    <form action="/register" method="post">
+        <h2>Registration</h2>
+
+        <%if(typeof alert != 'undefined'){%>
+            <% alert.forEach(function(error){%>
+                <p id="password-para"><%= error.msg %></p>
+        <%})%>
+        <%}%>
+                    
+        <input autocomplete="off" type="text" name="name" placeholder="Name">
+        <select id="department" name="department">
+            <option value="ICE">ICE</option>
+            <option value="CSE">CSE</option>
+            <option value="CHEM">CHEM</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            <option value="META">META</option>
+            <option value="PROD">PROD</option>
+            <option value="MECH">MECH</option>
+            <option value="CIVIL">CIVIL</option>
+        </select>
+        <select id="hostel" name="hostel">
+            <option value="Opal">Opal</option>
+            <option value="Zircon">Zircon</option>
+              </select>
+        <input type="text" name="email" placeholder="Email">
+        <input autocomplete="off"  type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password" id="p1">
+        <input type="password" name="cpassword" placeholder="Confirm Password" id="p2">
+        <button type="submit" id="reg-btn">Register!</button>
+    </form>
+</div>
+
+<%- include("partials/footer.ejs") %>
